@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Các cách select vào thẻ */
+      /* TagName selector */
+      h1 {
+        color: red;
+        background-color: yellow;
+      }
+      li {
+        color: blue;
+        background: lightcoral;
+      }
+      p {
+        background-color: lightgray;
+      }
+      /* span: thẻ span thẻ inline, Sử dụng trong trường hợp highlight trong văn bản. */
+      span {
+        background-color: lightgreen;
+      }
+      section {
+        width: 800px;
+        height: 500px;
+        background-color: lightyellow;
+      }
+    </style>
+    <link rel="stylesheet" href="ls2.css" />
+  </head>
+  <body>
+    <!-- div: group element -->
+    <!-- p, h1, h2, h3, ..., img, a, ul, ol, li -->
+    <!-- 
+      
+    -->
+    <section>
+      <div>
+        <h1 style="color: orange; background-color: rgb(16, 136, 255)">
+          Học CSS
+        </h1>
+        <p>Kỹ thuật CSS:</p>
+        <ul>
+          <li>Inline</li>
+          <li>Internal</li>
+          <li>External</li>
+        </ul>
+        <h1>Học HTML</h1>
+        <p>Các thuộc tính của display:</p>
+        <ol>
+          <li>block</li>
+          <li>inline</li>
+          <li>inline-block</li>
+          <li>none</li>
+        </ol>
+        <h1>Học JS</h1>
+        <span>Học lập trình</span>
+        <span>với Kite Academy</span>
+        <a href="https://google.com">Google</a>
+        <a href="">để biết thêm thông tin chi tiết</a>
+      </div>
+
+      <div style="width: 300px; color: #6d2315">
+        <span>Bánh chocolate</span>
+        <span style="float: right">99k</span>
+      </div>
+      <div style="width: 300px">
+        <span>Bánh vani</span>
+        <span style="float: right">99k</span>
+      </div>
+    </section>
+  </body>
+</html>
