@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3 - CSS Box Model</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+    <h1>CSS Box Model - Thực hành</h1>
+
+    <!-- ========== BÀI 1: THẺ PROFILE ========== -->
+    <section class="demo-section">
+      <h2>Bài 1: Thẻ Profile</h2>
+      <div class="profile-card">
+        <img
+          src="https://i.pravatar.cc/100"
+          alt="Avatar"
+          class="profile-avatar"
+        />
+        <h3 class="profile-name">Nguyễn Văn A</h3>
+        <p class="profile-desc">
+          Sinh viên năm 3, yêu thích lập trình web và thiết kế giao diện.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== BÀI 2: SO SÁNH CONTENT-BOX vs BORDER-BOX ========== -->
+    <section class="demo-section">
+      <h2>Bài 2: content-box vs border-box</h2>
+      <p>
+        Cả hai box đều có <code>width: 300px</code>, <code>padding: 25px</code>,
+        <code>border: 3px solid</code>
+      </p>
+
+      <div class="compare-container">
+        <div>
+          <h3>content-box (mặc định)</h3>
+          <p>Kích thước thực: 356px × 206px</p>
+          <div class="box-a">
+            width: 300px<br />
+            Thực tế: 356px
+          </div>
+        </div>
+
+        <div>
+          <h3>border-box</h3>
+          <p>Kích thước thực: 300px × 150px</p>
+          <div class="box-b">
+            width: 300px<br />
+            Thực tế: 300px
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BÀI 3: LAYOUT 3 CỘT ========== -->
+    <section class="demo-section">
+      <h2>Bài 3: Layout 3 cột với border-box</h2>
+      <div class="three-col-container">
+        <div class="col col-1">
+          <h3>Cột 1</h3>
+          <p>padding: 10px<br />border: 2px</p>
+        </div>
+        <div class="col col-2">
+          <h3>Cột 2</h3>
+          <p>padding: 20px<br />border: 3px</p>
+        </div>
+        <div class="col col-3">
+          <h3>Cột 3</h3>
+          <p>padding: 15px<br />border: 4px</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BÀI 4: MARGIN COLLAPSING ========== -->
+    <section class="demo-section">
+      <h2>Bài 4: Margin Collapsing</h2>
+
+      <div class="collapse-example">
+        <h3>Có margin collapsing:</h3>
+        <div class="collapse-wrapper">
+          <div class="box-margin box-m1">margin-bottom: 30px</div>
+          <div class="box-margin box-m2">
+            margin-top: 20px → Khoảng cách = 30px
+          </div>
+          <div class="box-margin box-m3">
+            margin-top: 40px → Khoảng cách = 40px
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse-example">
+        <h3>Ngăn margin collapsing (dùng overflow: hidden):</h3>
+        <div class="collapse-wrapper no-collapse">
+          <div class="box-margin box-m1">margin-bottom: 30px</div>
+          <div class="box-margin box-m2">
+            margin-top: 20px → Khoảng cách = 50px
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
