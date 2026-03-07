@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e7e5e6;
+}
+
+.menu-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #e7e5e6;
+}
+
+.menu {
+    background: #e7e5e6;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 40px 24px 40px;
+    min-width: 320px;
+    margin-bottom: 24px;
+}
+
+.menu-title {
+    color: #6d2315;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.price {
+    background: #e7e5e6;
+    border-radius: 16px;
+    padding: 2px 16px;
+    color: #6d2315;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.hotline {
+    background: #6d2315;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    border-radius: 0 0 16px 16px;
+}
