@@ -6,3 +6,45 @@
 body {
   font-family: "Times New Roman", Georgia, Serif;
 }
+
+header {
+  box-shadow:
+    0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.wrap-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 4px;
+}
+
+a:hover {
+  background-color: #ccc;
+}
+
+.container {
+  max-width: 1280px; /* Limit content width on large screens */
+  margin: 0 auto; /* Center the container */
+}
+
+.logo {
+  letter-spacing: 4px;
+  padding: 8px 16px;
+}
+
+.logo:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+}

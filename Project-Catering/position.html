@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--
+    POSITION: 
+    - static: Đây là giá trị mặc định của thuộc tính "position". Khi một phần tử có vị trí "static".
+    
+    - Có thể sử dụng 4 top, bottom, right, left chỉ static không sử dụng được
+    - z-index: Chỉ sử dụng được với các phần tử có thuộc tính position là relative, absolute, fixed, sticky. 
+      Dùng để xác định thứ tự xếp chồng của các phần tử trên trang web.
+
+    - relative: Khi một phần tử được đặt vị trí theo kiểu "relative", 
+    nó sẽ được di chuyển dựa trên vị trí ban đầu mà nó chiếm trên trang, 
+    và các phần tử khác vẫn sẽ giữ nguyên vị trí của mình 
+
+    - absolute: Khi sử dụng giá trị "absolute",
+    phần tử được đặt vị trí tuyệt đối theo phần tử cha gần nhất mà có thuộc tính "position" không phải là "static". 
+    Điều này cho phép bạn đặt vị trí chính xác của một phần tử trong một phần tử khác, 
+    và điều chỉnh vị trí dựa trên các thuộc tính "top", "bottom", "left" và "right".
+
+    - fixed: Khi sử dụng giá trị "fixed", 
+    phần tử sẽ được đặt vị trí cố định trên trình duyệt và không bị ảnh hưởng bởi cuộn trang. 
+    Điều này thường được sử dụng cho các phần tử như thanh menu hoặc tiêu đề nằm cố định trên trang web.
+
+    - sticky: Khi sử dụng giá trị "sticky",
+    phần tử sẽ được đặt vị trí "sticky" khi nó nằm trong vùng nhìn thấy của trình duyệt.
+    Khi người dùng cuộn trang, phần tử sẽ giữ vị trí của nó cho đến khi nó chạm vào một điểm nhất định,
+    sau đó nó sẽ trở thành "fixed" và giữ vị trí cố định trong vùng nhìn thấy của trình duyệt.
+  -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+      }
+      .container {
+        display: flex;
+        gap: 8px;
+        background-color: lightgoldenrodyellow;
+        height: 200vh;
+      }
+      .pos-relative {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        background-color: plum;
+      }
+      .pos-absolute {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(77, 199, 239);
+        font-size: 12px;
+      }
+      .pos-fixed {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+      .box-v2 {
+        height: 300px;
+        width: 300px;
+        background-color: orangered;
+      }
+      .pos-sticky {
+        height: 100px;
+        width: 100px;
+        position: sticky;
+        top: 0;
+        background-color: lightslategray;
+      }
+      .pos-fixed:hover {
+        background-color: rgb(255, 154, 118);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box pos-fixed">Fixed</div>
+      <div class="box pos-relative">
+        Relative
+        <div class="pos-absolute">Absolute</div>
+      </div>
+      <div class="box"></div>
+      <div class="box-v2">
+        <div class="pos-sticky">Sticky</div>
+      </div>
+    </div>
+  </body>
+</html>
