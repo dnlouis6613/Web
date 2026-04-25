@@ -196,3 +196,8 @@ a:hover {
   line-height: 1.5;
   padding: 26px 0px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
